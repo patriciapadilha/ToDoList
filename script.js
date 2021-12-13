@@ -20,13 +20,29 @@ function getText (){
         let toDo = input.value;
         // console.log(toDo);
         let item = document.createElement('li');
-        item.className = 'item';
+        // item.className = 'item';
         item.innerText = toDo;
         listOl.appendChild(item);
         input.value = '';
     })
 }
 
+
+// // função por mudança de class:
+
+// function changeBackground () {
+//     listOl.addEventListener('click' , function (event) { 
+//         let listLi = document.querySelectorAll('li');
+//         for(let index = 0; index < listLi.length; index += 1){
+//             if(listLi[index].className === 'changeBackground'){
+//                 listLi[index].className = '';
+//             }
+//         }
+//         event.target.className = 'changeBackground';
+//     }); 
+// }
+
+// função por style:
 
 function changeBackground () {
     listOl.addEventListener('click' , function (event) { 
@@ -40,18 +56,6 @@ function changeBackground () {
     }); 
 }
 
-// // função por mudança de class:
-
-// function changeBackground () {
-//     listOl.addEventListener('click' , function (event) { 
-//         if (event.target.className === 'changeBackground') {
-//             event.target.className = '';
-//         } else {
-//             event.target.classList.add('changeBackground');
-//         }
-//     }); 
-// }
-
 
 
 function itemCompleted () {
@@ -59,8 +63,10 @@ function itemCompleted () {
     listOl.addEventListener('dblclick' , function (event) {
         if (event.target.className === 'completed') {
             // event.target.classList.remove('completed');
+            event.target.className = '';
         } else {
-            event.target.classList.add('completed');
+            // event.target.classList.add('completed');
+            event.target.className = 'completed';
         }
     });
 }
