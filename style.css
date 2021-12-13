@@ -6,6 +6,7 @@
 .input {
     line-height: 30px;
     width: 300px;
+    margin-bottom: 20px;
 }
 
 .btn {
@@ -19,4 +20,8 @@
 
 .btn:hover {
     background-color: hotpink;
+}
+
+.changeBackground {
+    background-color: rgb(128, 128, 128);
 }
