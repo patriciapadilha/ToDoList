@@ -7,11 +7,13 @@ let toDoButton = document.getElementById('criar-tarefa');
 let listOl = document.getElementById('lista-tarefas');
 let listLi = document.querySelectorAll('li');
 let cleanButton = document.getElementById('apaga-tudo');
+let cleanCompletedButton = document.getElementById('remover-finalizados');
 
 getText ()
 changeBackground ()
 itemCompleted ()
 cleanAllButton ()
+cleanCompleted ()
 
 
 
@@ -84,7 +86,16 @@ function cleanAllButton () {
 
 
 
-
+function cleanCompleted () {
+    cleanCompletedButton.addEventListener('click' , function () {
+        let listLi = document.querySelectorAll('li');
+        for(let index = 0; index < listLi.length; index += 1){
+            if(listLi[index].className === 'completed'){
+                listOl.removeChild(listLi[index]);
+            }
+        }
+    })
+}
 
 
 

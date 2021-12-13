@@ -9,7 +9,7 @@ p {
 
 .input {
     line-height: 30px;
-    width: 300px;
+    width: 450px;
     margin-bottom: 20px;
 }
 
@@ -18,7 +18,7 @@ p {
     background-color: gray;
     padding: 10px;
     border-radius: 5px;
-    width: 110px;
+    width: 150px;
     font-family: 'Montserrat';
 
 }
