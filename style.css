@@ -3,19 +3,24 @@
     margin-top: 0px;
 }
 
+p {
+    font-family: 'Montserrat'; 
+}
+
 .input {
     line-height: 30px;
     width: 300px;
     margin-bottom: 20px;
 }
 
+
 .btn {
     background-color: gray;
     padding: 10px;
     border-radius: 5px;
-    width: 70px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: medium;
+    width: 110px;
+    font-family: 'Montserrat';
+
 }
 
 .btn:hover {
@@ -24,4 +29,8 @@
 
 .changeBackground {
     background-color: rgb(128, 128, 128);
+}
+
+.completed {
+    text-decoration: line-through solid rgb(0, 0, 0);
 }
