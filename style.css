@@ -1,37 +1,41 @@
-
-* {
-    margin-top: 0px;
-}
-
-p {
-    font-family: 'Montserrat'; 
+body {
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(249, 228, 231);
 }
 
 .input {
-    line-height: 30px;
-    width: 450px;
-    margin-bottom: 20px;
+  line-height: 30px;
+  width: 60%;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .btn {
-    background-color: gray;
-    padding: 10px;
-    border-radius: 5px;
-    width: 150px;
-    font-family: 'Montserrat';
-
+  background-color: rgb(194, 189, 189);
+  padding: 10px;
+  border-radius: 5px;
+  width: 150px;
 }
 
 .btn:hover {
-    background-color: hotpink;
-}
-
-.changeBackground {
-    background-color: rgb(128, 128, 128);
+  background-color: rgb(120, 119, 119);
 }
 
 .completed {
-    text-decoration: line-through solid rgb(0, 0, 0);
+  text-decoration: line-through solid black;
 }
 
+ol {
+  width: 90%;
+}
+  

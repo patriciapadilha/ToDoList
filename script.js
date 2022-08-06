@@ -1,103 +1,66 @@
-//input - id #texto-tarefa
-//button - id #criar-tarefa
-//ol - id #lista-tarefas
+const input = document.getElementById('texto-tarefa');
+const toDoButton = document.getElementById('criar-tarefa');
+const listOl = document.getElementById('lista-tarefas');
+const cleanButton = document.getElementById('apaga-tudo');
+const cleanCompletedButton = document.getElementById('remover-finalizados');
 
-let input = document.getElementById('texto-tarefa');
-let toDoButton = document.getElementById('criar-tarefa');
-let listOl = document.getElementById('lista-tarefas');
-let listLi = document.querySelectorAll('li');
-let cleanButton = document.getElementById('apaga-tudo');
-let cleanCompletedButton = document.getElementById('remover-finalizados');
-
-getText ()
-changeBackground ()
-itemCompleted ()
-cleanAllButton ()
-cleanCompleted ()
-
-
-
-function getText (){
-    toDoButton.addEventListener('click' , function () {
-        let toDo = input.value;
-        // console.log(toDo);
-        let item = document.createElement('li');
-        // item.className = 'item';
-        item.innerText = toDo;
-        listOl.appendChild(item);
-        input.value = '';
-    })
+function getText() {
+  toDoButton.addEventListener('click', () => {
+    const toDo = input.value;
+    if (input.value !== '') {
+      const item = document.createElement('li');
+      item.innerText = toDo;
+      listOl.appendChild(item);
+      input.value = '';
+    }
+  });
 }
 
-
-// // função por mudança de class:
-
-// function changeBackground () {
-//     listOl.addEventListener('click' , function (event) { 
-//         let listLi = document.querySelectorAll('li');
-//         for(let index = 0; index < listLi.length; index += 1){
-//             if(listLi[index].className === 'changeBackground'){
-//                 listLi[index].className = '';
-//             }
-//         }
-//         event.target.className = 'changeBackground';
-//     }); 
-// }
-
-// função por style:
-
-function changeBackground () {
-    listOl.addEventListener('click' , function (event) { 
-        let listLi = document.querySelectorAll('li');
-        for(let index = 0; index < listLi.length; index += 1){
-            if(listLi[index].style.backgroundColor === 'rgb(128, 128, 128)'){
-                listLi[index].style.backgroundColor = 'rgb(255, 255, 255)';
-            }
-        }
-        event.target.style.backgroundColor = 'rgb(128, 128, 128)';
-    }); 
+function changeBackground() {
+  listOl.addEventListener('click', (event) => {
+    const listLi = document.querySelectorAll('li');
+    for (let index = 0; index < listLi.length; index += 1) {
+      if (listLi[index].style.backgroundColor === 'rgb(220, 220, 220)') {
+        listLi[index].style.backgroundColor = 'rgb(249, 228, 231)';
+      }
+    }
+    event.target.style.backgroundColor = 'rgb(220, 220, 220)';
+  });
 }
 
-
-
-function itemCompleted () {
-    // console.log(listOl);
-    listOl.addEventListener('dblclick' , function (event) {
-        if (event.target.className === 'completed') {
-            // event.target.classList.remove('completed');
-            event.target.className = '';
-        } else {
-            // event.target.classList.add('completed');
-            event.target.className = 'completed';
-        }
-    });
+function itemCompleted() {
+  listOl.addEventListener('dblclick', (event) => {
+    if (event.target.className === 'completed') {
+      event.target.className = '';
+    } else {
+      event.target.className = 'completed';
+    }
+  });
 }
 
-
-function cleanAllButton () {
-    cleanButton.addEventListener('click' , function () {
-        let listLi = document.querySelectorAll('li');
-        for(let index = 0; index < listLi.length; index += 1){
-            let element = listLi[index];
-            listOl.removeChild(element);
-        }
-    })
+function cleanAllButton() {
+  cleanButton.addEventListener('click', () => {
+    const listLi = document.querySelectorAll('li');
+    for (let index = 0; index < listLi.length; index += 1) {
+      const element = listLi[index];
+      listOl.removeChild(element);
+    }
+  });
 }
 
-
-
-function cleanCompleted () {
-    cleanCompletedButton.addEventListener('click' , function () {
-        let listLi = document.querySelectorAll('li');
-        for(let index = 0; index < listLi.length; index += 1){
-            if(listLi[index].className === 'completed'){
-                listOl.removeChild(listLi[index]);
-            }
-        }
-    })
+function cleanCompleted() {
+  cleanCompletedButton.addEventListener('click', () => {
+    const listLi = document.querySelectorAll('li');
+    for (let index = 0; index < listLi.length; index += 1) {
+      if (listLi[index].className === 'completed') {
+        listOl.removeChild(listLi[index]);
+      }
+    }
+  });
 }
 
-
-
-
-
+getText();
+changeBackground();
+itemCompleted();
+cleanAllButton();
+cleanCompleted();

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ToDo List</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300" rel="stylesheet">
 </head>
@@ -12,25 +12,16 @@
     <header>
         <h1 id='title'>Minha Lista de Tarefas</h1>
     </header>
-    <section>
+    <section class="container">
         <p id='funcionamento'> Clique duas vezes em um item para marcá-lo como completo</p>
-        <input id='texto-tarefa' class='input' type="text">
+        <input id='texto-tarefa' class='input' type="text" placeholder="Digite tarefa">
     </section>
     <section>
         <ol id='lista-tarefas'></ol>
         <button id='criar-tarefa' class='btn'>Adicionar</button>
         <button id="apaga-tudo" class='btn'>Apagar tudo</button>
         <button id="remover-finalizados" class='btn'>Apagar concluidos</button>
-
     </section>
-    
-
-
-    <footer>
-
-    </footer>
-    
-
     <script src="script.js"></script>
 </body>
 </html>
