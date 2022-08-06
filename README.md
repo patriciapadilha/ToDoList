@@ -17,6 +17,6 @@ Regras:
 * Clicar duas vezes em um item, faz com que ele seja riscado, indicando que foi completo. Deve ser possível desfazer essa ação clicando novamente duas vezes no item;
 
 
-[Deploy do projeto]()
+[Deploy do projeto](https://to-do-list-nine-pink.vercel.app/)
 
 <img width="500px" alt="imagem da aplicação com o pixel bord" src="image/tela.png">
